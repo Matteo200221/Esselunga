@@ -11,13 +11,13 @@
 		<dependent-module archiveName="EsselungaModel.jar" deploy-path="/lib" handle="module:/resource/EsselungaModel/EsselungaModel">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
-		<dependent-module archiveName="EsselungaRest.war" deploy-path="/" handle="module:/resource/EsselungaRest/EsselungaRest">
-			<dependent-object/>
-			<dependency-type>uses</dependency-type>
-		</dependent-module>
 		<dependent-module archiveName="EsselungaWEB.war" deploy-path="/" handle="module:/resource/EsselungaWEB/EsselungaWEB">
 			<dependent-object/>
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
+        <dependent-module archiveName="EsselungaRest.war" deploy-path="/" handle="module:/resource/EsselungaRest/EsselungaRest">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
 	</wb-module>
 </project-modules>

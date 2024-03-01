@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom"
-import { utenteInsert } from "../urls"
+import { pathUtenteInsert } from "../urls"
 import { useState } from "react"
 import axios from 'axios'
 
@@ -21,7 +21,7 @@ const Registrazione = () => {
         && email !== ''
         && password !== ''){
             try{
-                var response = await axios.post(utenteInsert, {
+                var response = await axios.post(pathUtenteInsert, {
                     nome,
                     cognome,
                     email,

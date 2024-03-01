@@ -6,14 +6,14 @@
   </module>
   <module>
     <web>
-      <web-uri>EsselungaRest.war</web-uri>
-      <context-root>EsselungaRest</context-root>
+      <web-uri>EsselungaWEB.war</web-uri>
+      <context-root>EsselungaWEB</context-root>
     </web>
   </module>
   <module>
     <web>
-      <web-uri>EsselungaWEB.war</web-uri>
-      <context-root>EsselungaWEB</context-root>
+      <web-uri>EsselungaRest.war</web-uri>
+      <context-root>EsselungaRest</context-root>
     </web>
   </module>
 </application>

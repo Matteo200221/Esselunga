@@ -6,8 +6,8 @@
 		<project>EsselungaDB</project>
 		<project>EsselungaEJB</project>
 		<project>EsselungaModel</project>
-		<project>EsselungaRest</project>
 		<project>EsselungaWEB</project>
+		<project>EsselungaRest</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

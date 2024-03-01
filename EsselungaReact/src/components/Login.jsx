@@ -1,7 +1,9 @@
 import axios from "axios"
 import { useState } from "react"
 import { useHistory } from "react-router-dom"
-import { utenteLogin } from "../urls"
+import { pathUtenteLogin } from "../urls"
+import { funzione } from "./funzioni"
+import * as Costanti from "./costanti"
 
 const Login = () => {
 
@@ -12,21 +14,33 @@ const Login = () => {
 
     const login = async () => {
 
-        try {
+      /*   try {
 
-            const response = await axios.get(utenteLogin + email + '/' + password)
+            const response = await axios.get(pathUtenteLogin + email + '/' + password)
             console.log(response)
             
         } catch (ex) {
             
-            alert('Si è verificato un errore')
+            alert('Dati errati')
         }
+         */
+
+        const data = { 
+            
+            email : email,
+            password : password 
         
+        }
 
-    }
+        const response = await funzione(pathUtenteLogin, Costanti.POST, data)
 
-    const vaiAPagina = (route) => {
-        history.push(route)
+        console.log(response)
+        if(response.status === 200) {
+            history.push('/')
+        } else {
+            alert("credenziali errate")
+        }
+
     }
 
     return(

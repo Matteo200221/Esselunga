@@ -193,18 +193,44 @@ public class UtenteRest {
 		return Response.serverError().build();
 	}
 	
-	@GET
-	@Path("/getUtenteLogin/{email}/{password}")
-	public Response login(@PathParam("email") String email, @PathParam("password") String password) throws NoResultException {
+//	@GET
+//	@Path("/getUtenteLogin/{email}/{password}")
+//	public Response login(@PathParam("email") String email, @PathParam("password") String password) throws NoResultException {
+//		
+//		System.out.println("login");
+//		
+//		try {
+//			
+//			utenteEjbInterface = new EJBFactory<UtenteEjbInterface>(UtenteEjbInterface.class).getEJB();
+//			Utente utente = utenteEjbInterface.login(email, password);
+//			
+//			return Response.ok().entity(utente).build();
+//			
+//		} catch (EsselungaException ee) {
+//			
+//			ee.printStackTrace();
+//			return Response.serverError().build();
+//		
+//		} catch (Exception e) {
+//			
+//			e.printStackTrace();
+//			return Response.serverError().build();
+//		}
+//		
+//	}
+	
+	@POST
+	@Path("/getUtenteLogin")
+	public Response login(Utente utente) throws NoResultException {
 		
 		System.out.println("login");
 		
 		try {
 			
 			utenteEjbInterface = new EJBFactory<UtenteEjbInterface>(UtenteEjbInterface.class).getEJB();
-			Utente utente = utenteEjbInterface.login(email, password);
+			Utente utenteTrovato = utenteEjbInterface.login(utente.getEmail(), utente.getPassword());
 			
-			return Response.ok().entity(utente).build();
+			return Response.ok().entity(utenteTrovato).build();
 			
 		} catch (EsselungaException ee) {
 			

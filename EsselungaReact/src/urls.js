@@ -1,4 +1,4 @@
-const utenteInsert = 'http://localhost:8080/EsselungaRest/rest/utenteRest/utenteInsert'
-const utenteLogin = 'http://localhost:8080/EsselungaRest/rest/utenteRest/getUtenteLogin/'
+const pathUtenteInsert = 'http://localhost:8080/EsselungaRest/rest/utenteRest/utenteInsert'
+const pathUtenteLogin = 'http://localhost:8080/EsselungaRest/rest/utenteRest/getUtenteLogin/'
 
-export {utenteInsert, utenteLogin}
+export {pathUtenteInsert, pathUtenteLogin}
