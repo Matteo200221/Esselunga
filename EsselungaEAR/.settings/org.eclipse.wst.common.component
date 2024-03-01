@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+	<wb-module deploy-name="EsselungaEAR">
+		<wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+		<dependent-module archiveName="EsselungaDB.jar" deploy-path="/lib" handle="module:/resource/EsselungaDB/EsselungaDB">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module archiveName="EsselungaEJB.jar" deploy-path="/" handle="module:/resource/EsselungaEJB/EsselungaEJB">
+			<dependent-object/>
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module archiveName="EsselungaModel.jar" deploy-path="/lib" handle="module:/resource/EsselungaModel/EsselungaModel">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module archiveName="EsselungaRest.war" deploy-path="/" handle="module:/resource/EsselungaRest/EsselungaRest">
+			<dependent-object/>
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module archiveName="EsselungaWEB.war" deploy-path="/" handle="module:/resource/EsselungaWEB/EsselungaWEB">
+			<dependent-object/>
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+	</wb-module>
+</project-modules>
