@@ -3,14 +3,12 @@ import { EsselungaContext } from "../Context"
 import { ModalConfermaEliminazione } from "../utility/modals"
 
 
+
 const Utente = () => {
 
     const user = useContext(EsselungaContext)
 
-    const eliminaAccount = () => {
-
-        console.log('ciao')
-    }
+    
 
     return(
         <>
@@ -36,7 +34,7 @@ const Utente = () => {
             <br/>
             <br/>
 
-            <ModalConfermaEliminazione eliminaAccount = {eliminaAccount}></ModalConfermaEliminazione>
+            <ModalConfermaEliminazione></ModalConfermaEliminazione>
         </>
     )
 }
