@@ -3,10 +3,13 @@ import { pathProdottoGetMenu } from "../utility/urls"
 import axios from 'axios'
 import { useHistory } from "react-router-dom"
 import { EsselungaContext } from "../Context"
+import AlertSucces from "../utility/AlertSucces"
 
 const Menu = () => {
     
     const [menu, setMenu] = useState([])
+    const [show, setShow] = useState(false)
+    var testo = 'prodotto aggiunto con successo'
 
     const history = useHistory()
 
@@ -39,11 +42,12 @@ const Menu = () => {
         carrelloAppoggio.push(prodotto)
         context.setCarrello(carrelloAppoggio)
         console.log(context.carrello)
-        alert('prodotto aggiunto!')
+        setShow(true)
     }
     return(
         <>
             <h1>Menù</h1>
+            <AlertSucces show={show} testo={testo} variant={'success'} setShow={setShow}/>
             {menu.length > 0 ? 
             <table>
                 <thead>

@@ -3,6 +3,7 @@ import * as Costanti from "./costanti"
 
  export async function funzione (path, metodo, oggetto) {
 
+    // eslint-disable-next-line
     switch (metodo) {
 
         case Costanti.GET : 
