@@ -1,8 +1,9 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { useHistory } from "react-router-dom"
 import * as Costanti from '../utility/costanti'
 import { funzione } from "../utility/funzioni"
 import { pathUtenteLogin } from '../utility/urls'
+import { EsselungaContext } from "../Context"
 
 const Login = () => {
 
@@ -10,6 +11,8 @@ const Login = () => {
     const [password, setPassword] = useState('')
 
     const history = useHistory()
+
+    const user = useContext(EsselungaContext)
 
     const login = async () => {
 
@@ -35,7 +38,8 @@ const Login = () => {
 
         console.log(response)
         if(response.status === 200) {
-            history.push('/')
+            user.setUtente(response.data)
+            history.push('/account')
         } else {
             alert("credenziali errate")
         }

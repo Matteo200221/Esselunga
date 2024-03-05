@@ -5,6 +5,8 @@ import Accesso from './components/Accesso';
 import Registrazione from './components/Registrazione';
 import Login from './components/Login';
 import { useState } from 'react';
+import Utente from './components/Utente';
+
 
 function App() {
 
@@ -29,6 +31,12 @@ function App() {
           </Route>
           <Route exact path={'/login'}>
             <Login/>
+          </Route>
+          <Route exact path={'/account'}>
+            <Utente/>
+          </Route>
+          <Route exact path={'/menu'}>
+           
           </Route>
         </Switch>
         </EsselungaContext.Provider>
