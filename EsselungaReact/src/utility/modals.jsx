@@ -7,6 +7,7 @@ import { funzione } from "../utility/funzioni"
 import { pathUtenteDelete } from "../utility/urls"
 import * as Costanti from '../utility/costanti'
 import AlertErrore from './Alert';
+import { useHistory } from 'react-router-dom';
 
 export const ModalConfermaEliminazione = () => {
   const [show, setShow] = useState(false);
@@ -16,16 +17,24 @@ export const ModalConfermaEliminazione = () => {
 
   const user = useContext(EsselungaContext)
 
-  const [password, setPassword] = useState()
+  const history = useHistory()
 
+  const [password, setPassword] = useState()
   const [controllo, setControllo] = useState(false)
 
   const eliminaAccount = async () => {
 
     if (password === user.utente.password) {
       const response = await funzione(pathUtenteDelete, Costanti.DELETE, user.utente)
-      console.log(response)
-      console.log('delete')
+      
+      if(response.status === 204) {
+
+        history.push('/')
+      } else if (response.status === 500) {
+
+        alert('Operazione non andata a buon fine')
+      }
+
     } else {
       
       console.log(user.utente.password)

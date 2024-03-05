@@ -48,14 +48,13 @@ const Login = () => {
 
     return(
         <>
-            <h3>Registrazione</h3>
+            <h3>Login</h3>
             <label>Email</label>
             <input type="text" onChange={(e) => setEmail(e.target.value)}/>
             <br/>
             <label>Password</label>
             <input type="password" onChange={(e) => setPassword(e.target.value)}/>
             <br/>
-            <h3>Login</h3>
             <button onClick={(e) => login()}>login</button>
         </>
     )

@@ -11,7 +11,8 @@ import * as Costanti from "./costanti"
                 return await axios.post(path, oggetto)
         case Costanti.DELETE:
                 return await axios.post(path, oggetto)
-            
+        case Costanti.PUT:
+                return await axios.put(path, oggetto)            
 
     }
     
