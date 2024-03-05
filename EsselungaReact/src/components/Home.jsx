@@ -1,3 +1,5 @@
+import { useHistory } from "react-router-dom"
+
 const Home = () => {
 
     const history = useHistory()
@@ -8,9 +10,9 @@ const Home = () => {
     return(
         <>
             <h1>Home</h1>
-            <button onclick={(e) => vaiAPagina('/account')}>Account</button>
-            <button onclick={(e) => vaiAPagina('/menu')}>Menù</button>
-            <button onclick={(e) => vaiAPagina('/login')}>Indietro</button>
+            <button onClick={(e) => vaiAPagina('/account')}>Account</button>
+            <button onClick={(e) => vaiAPagina('/menu')}>Menù</button>
+            <button onClick={(e) => vaiAPagina('/login')}>Indietro</button>
         </>
     )
 }

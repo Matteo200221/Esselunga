@@ -6,13 +6,17 @@ import Registrazione from './components/Registrazione';
 import Login from './components/Login';
 import { useState } from 'react';
 import Utente from './components/Utente';
+import Menu from './components/Menu';
+import Home from './components/Home';
+import Carrello from './components/Carrello';
 
 
 function App() {
 
   const [utente,setUtente] = useState(null)
+  const [carrello, setCarrello] = useState([])
 
-  const contextValue = {utente, setUtente}
+  const contextValue = {utente, setUtente, carrello, setCarrello}
 
   return (
     <BrowserRouter>
@@ -36,7 +40,13 @@ function App() {
             <Utente/>
           </Route>
           <Route exact path={'/menu'}>
-           
+           <Menu />
+          </Route>
+          <Route exact path={'/home'}>
+           <Home />
+          </Route>
+          <Route exact path={'/carrello'}>
+           <Carrello />
           </Route>
         </Switch>
         </EsselungaContext.Provider>
