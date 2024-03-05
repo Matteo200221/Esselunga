@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom"
-import { pathUtenteInsert } from "../urls"
+import { pathUtenteInsert } from "../utility/urls"
 import { useState } from "react"
 import axios from 'axios'
 

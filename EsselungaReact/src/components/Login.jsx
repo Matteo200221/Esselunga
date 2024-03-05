@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { useHistory } from "react-router-dom"
-import { pathUtenteLogin } from "../utility/urls"
-import { funzione } from "./funzioni"
-import * as Costanti from "./costanti"
+import * as Costanti from '../utility/costanti'
+import { funzione } from "../utility/funzioni"
+import { pathUtenteLogin } from '../utility/urls'
 
 const Login = () => {
 
