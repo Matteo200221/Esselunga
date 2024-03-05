@@ -172,7 +172,7 @@ public class UtenteRest {
 		return Response.serverError().build();
 	}
 	
-	@DELETE
+	@POST
 	@Path("/utenteDelete")
 	public Response delete(Utente utente) {
 		
