@@ -18,6 +18,7 @@ const Menu = () => {
 
     useEffect(() => {
         getMenu()
+        // eslint-disable-next-line
     }, [])
 
     const getMenu = async () => {
@@ -46,13 +47,15 @@ const Menu = () => {
             {menu.length > 0 ? 
             <table>
                 <thead>
+                    <tr>
                     <th>Nome</th>
                     <th>Prezzo</th>
                     <th>Aggiungi</th>
+                    </tr>
                 </thead>
                 <tbody>
                     {menu?.map(prodotto => (
-                        <tr>
+                        <tr key={prodotto.id}>
                             <td>{prodotto.nome}</td>
                             <td>{prodotto.prezzo} €</td>
                             <td><button onClick={(e) => aggiungiAlCarrello(e, prodotto)}>+</button></td>

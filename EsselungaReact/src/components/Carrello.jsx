@@ -20,6 +20,10 @@ const Carrello = () => {
         console.log(context.carrello)
     }
 
+    const vaiAPagina = (route) => {
+        history.push(route)
+    }
+
     
     return(
         <>
@@ -27,13 +31,15 @@ const Carrello = () => {
             {context.carrello.length > 0 ?
             <table>
                 <thead>
+                    <tr>
                     <th>Nome</th>
                     <th>Prezzo</th>
                     <th>Rimuovi</th>
+                    </tr>
                 </thead>
                 <tbody>
-                    {context.carrello?.map(prodotto => (
-                        <tr>
+                    {context.carrello?.map((prodotto, index) => (
+                        <tr key={index}>
                            <td>{prodotto.nome}</td>
                            <td>{prodotto.prezzo} €</td>
                            <td><button onClick={(e) => rimuoviProdotto(e, prodotto)}>-</button></td>
@@ -42,7 +48,7 @@ const Carrello = () => {
                 </tbody>
             </table> :
             <p>carrello vuoto</p>}
-            <button>Indietro</button>
+            <button onClick={(e) => vaiAPagina('/menu')}>Indietro</button>
         </>
     )
 }
