@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { EsselungaContext } from "../Context"
-import { ModalConfermaEliminazione } from "../utility/modals"
+import { ModalConfermaEliminazione, ModalUpdate } from "../utility/modals"
 
 
 
@@ -36,7 +36,10 @@ const Utente = () => {
 
             <ModalConfermaEliminazione></ModalConfermaEliminazione>
 
-            
+            <br/>
+            <br/>
+
+            <ModalUpdate></ModalUpdate>
         </>
     )
 }

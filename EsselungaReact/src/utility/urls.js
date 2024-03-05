@@ -2,3 +2,4 @@ export const pathUtenteInsert = 'http://localhost:8080/EsselungaRest/rest/utente
 export const pathUtenteLogin = 'http://localhost:8080/EsselungaRest/rest/utenteRest/getUtenteLogin/'
 export const pathProdottoGetMenu = 'http://localhost:8080/EsselungaRest/rest/prodottoRest/getListaProdotti'
 export const pathUtenteDelete = 'http://localhost:8080/EsselungaRest/rest/utenteRest/utenteDelete/'
+export const pathUtenteUpdate = 'http://localhost:8080/EsselungaRest/rest/utenteRest/utenteUpdate/'
