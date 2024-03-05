@@ -9,6 +9,7 @@ const Utente = () => {
 
     const eliminaAccount = () => {
 
+        console.log('ciao')
     }
 
     return(
@@ -16,33 +17,26 @@ const Utente = () => {
 
             <p>Nome</p> 
             
-            <br/>
-
-            <p>{user.utente.nome}</p>
+            <label>{user.utente.nome}</label>
             
+            <br/>
             <br/>
 
             <p>Cognome</p>
 
+            <label>{user.utente.cognome}</label>
+
             <br/>
-
-            <p>{user.utente.cognome}</p>
-
             <br/>
 
             <p>Email</p>
 
+            <label>{user.utente.email}</label>
+
             <br/>
-
-            <p>{user.utente.email}</p>
-
             <br/>
 
             <ModalConfermaEliminazione eliminaAccount = {eliminaAccount}></ModalConfermaEliminazione>
-
-
-            
-        
         </>
     )
 }

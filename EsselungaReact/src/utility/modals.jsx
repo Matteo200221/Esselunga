@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const ModalConfermaEliminazione = ( {eliminaAccount} ) => {
   const [show, setShow] = useState(false);
@@ -24,6 +25,10 @@ export const ModalConfermaEliminazione = ( {eliminaAccount} ) => {
           <Modal.Title>Conferma elimina account</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          <label>Password</label>
+          
+          <br/>
+          
           <input type='password'></input> 
         </Modal.Body>
         <Modal.Footer>

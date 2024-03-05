@@ -39,7 +39,7 @@ const Login = () => {
         console.log(response)
         if(response.status === 200) {
             user.setUtente(response.data)
-            history.push('/')
+            history.push('/account')
         } else {
             alert("credenziali errate")
         }

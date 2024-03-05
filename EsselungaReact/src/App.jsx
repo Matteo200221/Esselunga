@@ -35,6 +35,9 @@ function App() {
           <Route exact path={'/account'}>
             <Utente/>
           </Route>
+          <Route exact path={'/menu'}>
+           
+          </Route>
         </Switch>
         </EsselungaContext.Provider>
       </div>
