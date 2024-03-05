@@ -1,7 +1,6 @@
-import axios from "axios"
 import { useState } from "react"
 import { useHistory } from "react-router-dom"
-import { pathUtenteLogin } from "../urls"
+import { pathUtenteLogin } from "../utility/urls"
 import { funzione } from "./funzioni"
 import * as Costanti from "./costanti"
 
