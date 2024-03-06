@@ -95,20 +95,24 @@ export const ModalUpdate = () => {
   const [cognome, setCognome] = useState()
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
-
-  const utenteAggiornato = {
-
-    id : user.utente.id,
-    nome : nome === '' ? user.utente.nome : nome,
-    cognome : cognome === '' ? user.utente.cognome : cognome,
-    email : email === '' ? user.utente.email : email,
-    password : password === '' ? user.utente.password : password
-  }
-
+  
+  
   const aggiornaDati = async () => {
+    
+    const utenteAggiornato = {
+  
+      id : user.utente.id,
+      nome : nome === undefined ? user.utente.nome : nome,
+      cognome : cognome === undefined ? user.utente.cognome : cognome,
+      email : email === undefined ? user.utente.email : email,
+      password : password === undefined ? user.utente.password : password
+    }
 
     const response = await funzione(pathUtenteUpdate, Costanti.PUT, utenteAggiornato)
     console.log(response)
+    console.log(user.utente)
+    console.log(utenteAggiornato)
+    console.log(nome)
 
     if (response.status === 201) {
 
