@@ -49,7 +49,7 @@ const Menu = () => {
             <h1>Menù</h1>
             <AlertSucces show={show} testo={testo} variant={'success'} setShow={setShow}/>
             {menu.length > 0 ? 
-            <table>
+            <table className="centerTable">
                 <thead>
                     <tr>
                     <th>Nome</th>
@@ -68,8 +68,8 @@ const Menu = () => {
                 </tbody>
             </table> :
             <p>menù vuoto</p>}
-            <button onClick={(e) => vaiAPagina('/carrello')}>Carrello</button>
-            <button onClick={(e) => vaiAPagina('/home')}>Indietro</button>
+            <button className="button button-green border-radius-50" onClick={(e) => vaiAPagina('/carrello')}>Carrello</button>
+            <button className="button button-green border-radius-50" onClick={(e) => vaiAPagina('/home')}>Indietro</button>
         </>
     )
 }

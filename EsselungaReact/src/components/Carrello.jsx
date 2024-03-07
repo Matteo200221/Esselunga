@@ -45,7 +45,7 @@ const Carrello = () => {
             <h1>Carrello</h1>
             {context.carrello.length > 0 ?
             <>
-                <table>
+                <table className="centerTable">
                     <thead>
                         <tr>
                         <th>Nome</th>
@@ -58,7 +58,7 @@ const Carrello = () => {
                             <tr key={index}>
                             <td>{prodotto.nome}</td>
                             <td>{prodotto.prezzo} €</td>
-                            <td><button onClick={(e) => rimuoviProdotto(e, prodotto)}>-</button></td>
+                            <td><button className="button button-green border-radius-50" onClick={(e) => rimuoviProdotto(e, prodotto)}>-</button></td>
                             </tr>
                         ))}
                     </tbody>
@@ -66,7 +66,7 @@ const Carrello = () => {
                 <p>Totale: {totale} €</p>
             </> :
             <p>carrello vuoto</p>}
-            <button onClick={(e) => vaiAPagina('/menu')}>Indietro</button>
+            <button className="button button-green border-radius-50" onClick={(e) => vaiAPagina('/menu')}>Indietro</button>
         </>
     )
 }

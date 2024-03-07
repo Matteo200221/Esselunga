@@ -55,7 +55,7 @@ const Login = () => {
             <label>Password</label>
             <input type="password" onChange={(e) => setPassword(e.target.value)}/>
             <br/>
-            <button onClick={(e) => login()}>login</button>
+            <button className="button button-green border-radius-50" onClick={(e) => login()}>login</button>
         </>
     )
 }

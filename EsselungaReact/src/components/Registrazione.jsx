@@ -56,9 +56,9 @@ const Registrazione = () => {
             <label>Password</label>
             <input type="text" onChange={(e) => setPassword(e.target.value)}/>
             <br/>
-            <button onClick={(e) => inserisciUtente()}>Invio</button>
+            <button className="button button-green border-radius-50" onClick={(e) => inserisciUtente()}>Invio</button>
             <br/>
-            <button onClick={(e) => vaiAPagina('/')}>Indietro</button>
+            <button className="button button-green border-radius-50" onClick={(e) => vaiAPagina('/')}>Indietro</button>
         </>
     )
 }

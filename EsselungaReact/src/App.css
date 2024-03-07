@@ -80,6 +80,20 @@
   border-radius: 50px;
 }
 
+.centerTable {
+  width:70%; 
+  margin-left:15%; 
+  margin-right:15%;
+  color: black;
+  font-weight: bolder;
+  table, th, td, tr {
+    border: 2px solid black;
+    width: 25%;
+    border-collapse: collapse;
+    background-color: white;
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

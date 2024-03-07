@@ -10,8 +10,8 @@ const Accesso = () => {
     return(
         <>
             <h3>Accesso</h3>
-            <button onClick={(e) => vaiAPagina('/registrazione')}>Registrazione</button>
-            <button onClick={(e) => vaiAPagina('/login')}>Login</button>
+            <button className="button button-green border-radius-50" onClick={(e) => vaiAPagina('/registrazione')}>Registrazione</button>
+            <button className="button button-green border-radius-50" onClick={(e) => vaiAPagina('/login')}>Login</button>
         </>
     )
 }
