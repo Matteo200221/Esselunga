@@ -19,43 +19,49 @@ function App() {
   const contextValue = {utente, setUtente, carrello, setCarrello}
 
   return (
-    <BrowserRouter>
-      <div className="App">
-      <header className="App-header">
-        <h1>Esselunga</h1>
-      </header>
+    <>
+
+        <header className="App-header">
+          <h1>Esselunga</h1>
+        </header>
+
+        <body className='App-body'>
+          <BrowserRouter>
+            <EsselungaContext.Provider value={contextValue}>
+              <Switch>
+                <Route exact path={'/'}>
+                  <Accesso/>
+                </Route>
+                <Route exact path={'/registrazione'}>
+                  <Registrazione/>
+                </Route>
+                <Route exact path={'/login'}>
+                  <Login/>
+                </Route>
+                <Route exact path={'/account'}>
+                  <Utente/>
+                </Route>
+                <Route exact path={'/menu'}>
+                <Menu />
+                </Route>
+                <Route exact path={'/home'}>
+                <Home />
+                </Route>
+                <Route exact path={'/carrello'}>
+                <Carrello />
+                </Route>
+              </Switch>
+            </EsselungaContext.Provider>
+          </BrowserRouter>
+        </body>
+
       <div>
-        <EsselungaContext.Provider value={contextValue}>
-        <Switch>
-          <Route exact path={'/'}>
-            <Accesso/>
-          </Route>
-          <Route exact path={'/registrazione'}>
-            <Registrazione/>
-          </Route>
-          <Route exact path={'/login'}>
-            <Login/>
-          </Route>
-          <Route exact path={'/account'}>
-            <Utente/>
-          </Route>
-          <Route exact path={'/menu'}>
-           <Menu />
-          </Route>
-          <Route exact path={'/home'}>
-           <Home />
-          </Route>
-          <Route exact path={'/carrello'}>
-           <Carrello />
-          </Route>
-        </Switch>
-        </EsselungaContext.Provider>
+        <footer className='App-footer'>
+          <h6>Sviluppato da M&M</h6>
+        </footer>
       </div>
-      <footer>
-        <h6>Sviluppato da M&M</h6>
-      </footer>
-    </div>
-    </BrowserRouter>
+
+    </>
   );
 }
 
